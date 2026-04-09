@@ -1,9 +1,10 @@
 import Item from '../Item/'
+import Title from '../Title'
 
-const List = ( { content } ) => {
+const List = ( { content, title } ) => {
   return (
         <section>
-        <h2>Lista de la compra</h2>
+            <Title title={title} />
             <section>
                 <ul>
                     {content.map((product)=>{

@@ -1,6 +1,7 @@
 import Anadir from './components/Anadir/index.jsx';
 
 import List from './components/List/index.jsx'
+import Title from './components/Title/index.jsx';
 
 import { defaultCompra } from './constants.js'
 
@@ -29,9 +30,13 @@ const App = () => {
 
     <section>
 
-      <List content = {compra} />
+      <List content = {compra} title="Lista de la compra"/>
 
-      <Anadir newProduct = {addProduct} />
+
+
+      <List content = {compra} title="Productos ya en el carro"/>
+
+      <Anadir newProduct ={addProduct} />
 
     </section>
   )   

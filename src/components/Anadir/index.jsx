@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import Title from '../Title'
+import { TagTypes } from '../../types'
 
 const Anadir = ( { newProduct } ) => {
     const[name, setName] = useState('')
@@ -8,12 +10,13 @@ const Anadir = ( { newProduct } ) => {
     }
     const handleClick = () => {
         newProduct ({ name })
+        setName('')
     }
     return(
         <section>
-            <h3>Añadir producto</h3>
+            <Title title = "Añadir producto" tag={TagTypes.H3}/>
 
-            <input onChange={handleChange} type="text"/>   
+            <input onChange={handleChange} type="text" value = { name }/>   
 
             <button onClick={handleClick}> 
                 Añadir
