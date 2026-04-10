@@ -8,6 +8,8 @@ import { defaultCompra } from './constants.js'
 
 import { useState , useEffect } from "react";
 
+import './index.css'
+
 
 const App = () => {
 
