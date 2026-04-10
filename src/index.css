@@ -1,35 +1,35 @@
-/* RESET BÁSICO */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-/* FONDO GENERAL */
+/* FONDO */
 body {
-  background: #f4f4f4;
+  background: #eef2f3;
   padding: 20px;
 }
 
-/* CONTENEDOR PRINCIPAL */
+/* LAYOUT */
 .layout {
   display: flex;
   gap: 20px;
   height: 90vh;
 }
 
-/* COLUMNAS PRINCIPALES */
+/* COLUMNAS */
 .column {
   flex: 1;
-  background: white;
-  border: 2px solid #333;
-  border-radius: 10px;
+  background: #ffffff;
+  border-radius: 12px;
   padding: 15px;
   overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* SIDEBAR DERECHA */
+/* SIDEBAR */
 .sidebar {
   width: 250px;
   display: flex;
@@ -37,40 +37,39 @@ body {
   gap: 20px;
 }
 
-/* CAJAS DEL SIDEBAR */
-.sidebar > div,
-.sidebar button,
-.sidebar input {
-  background: white;
-  border: 2px solid #333;
-  border-radius: 10px;
+/* CAJAS SIDEBAR */
+.sidebar > * {
+  background: #ffffff;
+  border-radius: 12px;
   padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* TITULOS */
-h1, h2, h3 {
+h1, h2 {
   text-align: center;
   margin-bottom: 10px;
+  color: #333;
 }
 
-/* LISTAS */
+/* LISTA */
 ul {
   list-style: none;
-  padding: 0;
 }
 
 /* ITEMS */
 li {
   padding: 10px;
   margin-bottom: 8px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 8px;
+  background: #f8f9fa;
   cursor: pointer;
-  transition: 0.2s;
+  transition: all 0.2s ease;
 }
 
+/* HOVER */
 li:hover {
-  background: #eee;
+  background: #e2e6ea;
   transform: scale(1.02);
 }
 
@@ -78,17 +77,32 @@ li:hover {
 input {
   width: 100%;
   padding: 10px;
-  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
 /* BOTONES */
 button {
   width: 100%;
   padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  font-weight: bold;
   cursor: pointer;
   transition: 0.2s;
 }
 
 button:hover {
-  background: #ddd;
+  background: #43a047;
+}
+
+/* BOTON VACIAR */
+.sidebar button:last-child {
+  background: #e53935;
+}
+
+.sidebar button:last-child:hover {
+  background: #c62828;
 }
