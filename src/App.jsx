@@ -67,34 +67,36 @@ const App = () => {
     }
 
     const clearAll = () => {
-    setCompra([])
-    setCarro([])
+      setCompra([])
+      setCarro([])
     }
+    const removeFromCompra = (id) => {
+      setCompra(compra.filter(item => item.id !== id))
+    }    
 
 
   return (
-  <section className = 'layout'>
+  <section className="layout">
 
-    <Title text={`Total productos: ${compra.length + carro.length}`} />
-    <div className='column'>
-      <List 
-      content={compra} 
-      title="Lista de la compra"
-      onItemClick={moveToCarro}
-    />
-    </div>
-    
-    <div className='column'>
-      <List
-        content={carro} 
-        title="Productos ya en el carro"
-        onItemClick={removeFromCarro}
-      />
-    </div>
-    <div className='sidebar'>
+    <div className="left">
       <Anadir newProduct={addProduct} />
 
-      <ClearButton onClear = {clearAll}/>
+      <List 
+        content={compra}
+        title="Lista de la compra"
+        onMove={moveToCarro}
+        onDelete={removeFromCompra}
+      />
+    </div>
+
+    <div className="right">
+      <ClearButton onClear={clearAll} />
+
+      <List 
+        content={carro}
+        title="Carrito"
+        onDelete={removeFromCarro}
+      />
     </div>
 
   </section>

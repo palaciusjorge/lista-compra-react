@@ -1,7 +1,7 @@
 import Item from '../Item/'
 import Title from '../Title'
 
-const List = ({ content, title, onItemClick }) => {
+const List = ({ content, title, onMove, onDelete }) => {
   return (
     <section>
       <Title title={title} />
@@ -10,9 +10,10 @@ const List = ({ content, title, onItemClick }) => {
           {content.map((product) => {
             return (
               <Item 
-                key={product.id} 
+                key={product.id}
                 product={product}
-                onClick={onItemClick}
+                onMove={onMove}
+                onDelete={onDelete}
               />
             )
           })}
