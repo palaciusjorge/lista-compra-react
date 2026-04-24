@@ -49,7 +49,6 @@ const App = () => {
     const newProduct = {
       id: Date.now(), // Genera un ID único basado en la fecha y hora actual, asi evito problemas de duplicidad de ID (no es relevante)
       name : name.trim(), // Elimina espacios en blanco al inicio y al final del nombre del producto,
-      done: false
     };
 
     setCompra([...compra, newProduct]);
